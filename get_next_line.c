@@ -6,12 +6,11 @@
 /*   By: dhammani <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/19 13:41:57 by dhammani          #+#    #+#             */
-/*   Updated: 2016/02/10 11:37:19 by dhammani         ###   ########.fr       */
+/*   Updated: 2016/02/17 15:37:47 by dhammani         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-#include <stdio.h>
 
 char			*get_a_line(char *str)
 {
@@ -69,16 +68,3 @@ int				get_next_line(int const fd, char **line)
 	s[fd] = delete_a_line(s[fd]);
 	return (1);
 }
-
-/*int				main(int argc, char **argv)
-{
-	char		*line = NULL;
- 	int			fd;
-	int			ret;
-
-	argc = 0;
-	fd = open(argv[1], O_RDONLY);
-	while ((ret = get_next_line(fd, &line)))
-		printf("%s", line);
-	return (0);
-}*/
