@@ -20,10 +20,7 @@ char			*get_a_line(char *str)
 	i = 0;
 	while (str[i] != '\n' && str[i] != '\0')
 		i++;
-	s1 = ft_strnew(i);
-	if (!s1)
-		return (NULL);
-	s1 = ft_strncpy(s1, str, i);
+	s1 = ft_strndup(str, i);
 	return (s1);
 }
 
