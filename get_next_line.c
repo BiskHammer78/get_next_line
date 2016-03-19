@@ -49,7 +49,7 @@ int				get_next_line(int const fd, char **line)
 	char			*l;
 
 	ret = 0;
-	if (line == NULL || fd < 0)
+	if (line == NULL || fd < 0 || read(fd, buf, 0) < 0)
 		return (-1);
 	if (!s[fd])
 		s[fd] = ft_strnew(0);
